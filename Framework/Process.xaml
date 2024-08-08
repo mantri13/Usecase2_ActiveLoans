@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1039,4032.5</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1065,5271.5</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -132,7 +132,7 @@
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="608,3967.5" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="608,5206.5" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="EndingAccountNo" />
       <Variable x:TypeArguments="x:String" Name="AccountNo" />
@@ -167,13 +167,13 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: botsdna.com/ActiveLoans/" sap:VirtualizedContainerService.HintSize="546,3369" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="f755622a-0c4d-4c1b-a47c-15548a2b587c" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: botsdna.com/ActiveLoans/" sap:VirtualizedContainerService.HintSize="546,4608" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="f755622a-0c4d-4c1b-a47c-15548a2b587c" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,3119" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,4358" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="PanNumber" />
               <Variable x:TypeArguments="x:String" Name="Status" />
@@ -206,6 +206,7 @@
                 <uix:TargetAnchorable BrowserURL="https://botsdna.com/ActiveLoans/" DesignTimeRectangle="1186, 639, 501, 36" DesignTimeScaleFactor="2" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='A' aaname='*{0}' /&gt;&quot;, EndingAccountNo)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='A' aaname='*{0}' type='' class='' check:text='SAPTHAGIRI GRAMIN BANK-7325' /&gt;&quot;, EndingAccountNo )]" Guid="7d0820c7-b139-491c-b9dc-35c944326669" ImageBase64="" InformativeScreenshot="951b52efb9822d093aeeca69d7f26a57.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='botsdna.com/ActiveLoans/' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
               </uix:NGetAttributeGeneric.Target>
             </uix:NGetAttributeGeneric>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,177" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Downloading Loan file for the Account no &quot; + AccountNo.ToString]" />
             <ui:GetLastDownloadedFile FileResource="{x:Null}" IgnoreFiles="{x:Null}" Timeout="{x:Null}" DisplayName="Wait for Download" DownloadFolder="[System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), &quot;Downloads&quot;)]" File="[LoanFile]" sap:VirtualizedContainerService.HintSize="450,598" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_2">
               <ui:GetLastDownloadedFile.Body>
                 <ActivityAction>
@@ -240,6 +241,8 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:GetLastDownloadedFile>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,177" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Downloaded Loan file for the Account no &quot; + AccountNo.ToString]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,177" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Extracting Loan text file for the Account no &quot; + AccountNo.ToString]" />
             <uascw:ExtractFiles Content="{x:Null}" DestinationFolderInfo="{x:Null}" File="{x:Null}" Password="{x:Null}" CodePage="Default" ConflictResolution="Replace" DestinationFolder="LoanFiles" DisplayName="Extract/Unzip Files" ExtractToADedicatedFolder="True" FileToExtract="[LoanFile.FullName]" sap:VirtualizedContainerService.HintSize="450,242" sap2010:WorkflowViewState.IdRef="ExtractFiles_2" SkipUnsupportedFiles="False">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -248,7 +251,9 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uascw:ExtractFiles>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,177" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Extracted Loan text file for the Account no &quot; + AccountNo.ToString]" />
             <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[LoanFile.FullName]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,177" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Reading Loan details from the text file&quot;]" />
             <ui:ReadTextFile File="{x:Null}" Content="[LoanDetails]" DisplayName="Read Text File" FileName="[&quot;LoanFiles\&quot;+ AccountNo+&quot;\&quot;+AccountNo+&quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="ReadTextFile_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -257,6 +262,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ReadTextFile>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,177" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Extracting Loan details from the text file&quot;]" />
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Extracting LoanDetails - Invoke Workflow File (Extracting LoanDetails.xaml)" sap:VirtualizedContainerService.HintSize="450,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Extracting LoanDetails.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="in_LoanDetails">[LoanDetails]</InArgument>
@@ -268,6 +274,7 @@
                 <OutArgument x:TypeArguments="x:String" x:Key="out_AccountNumber">[AccountNumber]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,177" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Extracted Loan details from the text file&quot;]" />
             <ui:WriteCell Cell="[&quot;B&quot;+ (in_TransactionNumber+1).ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="450,148" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Loans" Text="[BankAcctName]" WorkbookPath="Output.xlsx" />
             <ui:WriteCell Cell="[&quot;C&quot;+ (in_TransactionNumber+1).ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="450,148" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Loans" Text="[BranchName]" WorkbookPath="Output.xlsx" />
             <ui:WriteCell Cell="[&quot;D&quot;+ (in_TransactionNumber+1).ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="450,148" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="Loans" Text="[LoanDate]" WorkbookPath="Output.xlsx" />
