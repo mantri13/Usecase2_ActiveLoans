@@ -8,7 +8,7 @@
     <x:Property Name="out_EMI" Type="OutArgument(x:String)" />
     <x:Property Name="out_AccountNumber" Type="OutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1039,732</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1065,732</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -130,7 +130,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Matches DisplayName="Find Bank Account Name" FirstMatch="[out_BankAcctName]" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="Matches_6" Input="[in_LoanDetails]" IsBuilderTabModified="False" Pattern="(?&lt;=Bank: ).*" RegexOption="IgnoreCase, Compiled">
+    <ui:Matches BuilderPattern="(?&lt;=Branch:\s*).*" DisplayName="Find Bank Account Name" FirstMatch="[out_BankAcctName]" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="Matches_6" Input="[in_LoanDetails]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=Branch:\\s*).*&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=Branch:\s*).*" RegexOption="IgnoreCase, Compiled">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -138,7 +138,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:Matches>
-    <ui:Matches DisplayName="Find Bank Branch Name" FirstMatch="[out_BranchName]" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="Matches_7" Input="[in_LoanDetails]" IsBuilderTabModified="False" Pattern="(?&lt;=Branch: ).*" RegexOption="IgnoreCase, Compiled">
+    <ui:Matches BuilderPattern="(?&lt;=Branch:\s*).*" DisplayName="Find Bank Branch Name" FirstMatch="[out_BranchName]" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="Matches_7" Input="[in_LoanDetails]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=Branch:\\s*).*&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=Branch:\s*).*" RegexOption="IgnoreCase, Compiled">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -146,7 +146,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:Matches>
-    <ui:Matches BuilderPattern="(?&lt;=Loan Taken On: ).*" DisplayName="Find Loan Date" FirstMatch="[out_LoanDate]" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="Matches_8" Input="[in_LoanDetails]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=Loan Taken On: ).*&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=Loan Taken On: ).*" RegexOption="IgnoreCase, Compiled">
+    <ui:Matches BuilderPattern="(?&lt;=Loan Taken On:\s*).*" DisplayName="Find Loan Date" FirstMatch="[out_LoanDate]" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="Matches_8" Input="[in_LoanDetails]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=Loan Taken On:\\s*).*&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=Loan Taken On:\s*).*" RegexOption="IgnoreCase, Compiled">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -154,7 +154,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:Matches>
-    <ui:Matches DisplayName="Find Loan Amount" FirstMatch="[out_Amount]" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="Matches_9" Input="[in_LoanDetails]" IsBuilderTabModified="False" Pattern="(?&lt;=Amount: ).*" RegexOption="IgnoreCase, Compiled">
+    <ui:Matches BuilderPattern="(?&lt;=Amount:\s*)\d+" DisplayName="Find Loan Amount" FirstMatch="[out_Amount]" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="Matches_9" Input="[in_LoanDetails]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=Amount:\\s*)\\d+&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=Amount:\s*)\d+" RegexOption="IgnoreCase, Compiled">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
