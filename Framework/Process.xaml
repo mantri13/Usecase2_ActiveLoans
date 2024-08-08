@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1065,5271.5</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1065,5123.5</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -132,7 +132,7 @@
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="608,5206.5" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="608,5058.5" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="EndingAccountNo" />
       <Variable x:TypeArguments="x:String" Name="AccountNo" />
@@ -167,13 +167,13 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: botsdna.com/ActiveLoans/" sap:VirtualizedContainerService.HintSize="546,4608" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="f755622a-0c4d-4c1b-a47c-15548a2b587c" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: botsdna.com/ActiveLoans/" sap:VirtualizedContainerService.HintSize="546,4460" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="f755622a-0c4d-4c1b-a47c-15548a2b587c" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,4358" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,4210" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="PanNumber" />
               <Variable x:TypeArguments="x:String" Name="Status" />
@@ -183,7 +183,6 @@
               <Variable x:TypeArguments="x:String" Name="LoanDate" />
               <Variable x:TypeArguments="x:String" Name="Amount" />
               <Variable x:TypeArguments="x:String" Name="EMI" />
-              <Variable x:TypeArguments="x:String" Name="AccountNumber" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -271,7 +270,7 @@
                 <OutArgument x:TypeArguments="x:String" x:Key="out_LoanDate">[LoanDate]</OutArgument>
                 <OutArgument x:TypeArguments="x:String" x:Key="out_Amount">[Amount]</OutArgument>
                 <OutArgument x:TypeArguments="x:String" x:Key="out_EMI">[EMI]</OutArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="out_AccountNumber">[AccountNumber]</OutArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="out_AccountNumber" />
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,177" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Extracted Loan details from the text file&quot;]" />
@@ -282,8 +281,7 @@
             <ui:WriteCell Cell="[&quot;F&quot;+ (in_TransactionNumber+1).ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="450,148" sap2010:WorkflowViewState.IdRef="WriteCell_5" SheetName="Loans" Text="[EMI]" WorkbookPath="Output.xlsx" />
             <ui:WriteCell Cell="[&quot;G&quot;+ (in_TransactionNumber+1).ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="450,148" sap2010:WorkflowViewState.IdRef="WriteCell_6" SheetName="Loans" Text="[PanNumber]" WorkbookPath="Output.xlsx" />
             <ui:WriteCell Cell="[&quot;H&quot;+ (in_TransactionNumber+1).ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="450,148" sap2010:WorkflowViewState.IdRef="WriteCell_7" SheetName="Loans" Text="[Status]" WorkbookPath="Output.xlsx" />
-            <ui:WriteCell Cell="[&quot;H&quot;+ (in_TransactionNumber+1).ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="450,148" sap2010:WorkflowViewState.IdRef="WriteCell_8" SheetName="Loans" Text="[Status]" WorkbookPath="Output.xlsx" />
-            <ui:WriteCell Cell="[&quot;I&quot;+ (in_TransactionNumber+1).ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="450,141" sap2010:WorkflowViewState.IdRef="WriteCell_9" SheetName="Loans" Text="[AccountNumber]" WorkbookPath="Output.xlsx" />
+            <ui:WriteCell Cell="[&quot;H&quot;+ (in_TransactionNumber+1).ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="450,141" sap2010:WorkflowViewState.IdRef="WriteCell_8" SheetName="Loans" Text="[Status]" WorkbookPath="Output.xlsx" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>

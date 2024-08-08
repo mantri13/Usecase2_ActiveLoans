@@ -6,7 +6,6 @@
     <x:Property Name="out_LoanDate" Type="OutArgument(x:String)" />
     <x:Property Name="out_Amount" Type="OutArgument(x:String)" />
     <x:Property Name="out_EMI" Type="OutArgument(x:String)" />
-    <x:Property Name="out_AccountNumber" Type="OutArgument(x:String)" />
   </x:Members>
   <sap:VirtualizedContainerService.HintSize>1065,732</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -124,7 +123,7 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Extracting LoanDetails" sap:VirtualizedContainerService.HintSize="416,631" sap2010:WorkflowViewState.IdRef="Sequence_6">
+  <Sequence DisplayName="Extracting LoanDetails" sap:VirtualizedContainerService.HintSize="416,539" sap2010:WorkflowViewState.IdRef="Sequence_6">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -162,15 +161,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:Matches>
-    <ui:Matches BuilderPattern="(?&lt;=EMI\(month\):\s*)\d+" DisplayName="Find EMI Amount" FirstMatch="[out_EMI]" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="Matches_10" Input="[in_LoanDetails]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=EMI\\(month\\):\\s*)\\d+&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=EMI\(month\):\s*)\d+" RegexOption="IgnoreCase, Compiled">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:Matches>
-    <ui:Matches BuilderPattern="(?&lt;=Account Number:\s*)\d+" DisplayName="Find EMI Amount" FirstMatch="[out_AccountNumber]" sap:VirtualizedContainerService.HintSize="354,83" sap2010:WorkflowViewState.IdRef="Matches_11" Input="[in_LoanDetails]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=Account Number:\\s*)\\d+&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=Account Number:\s*)\d+" RegexOption="IgnoreCase, Compiled">
+    <ui:Matches BuilderPattern="(?&lt;=EMI\(month\):\s*)\d+" DisplayName="Find EMI Amount" FirstMatch="[out_EMI]" sap:VirtualizedContainerService.HintSize="354,83" sap2010:WorkflowViewState.IdRef="Matches_10" Input="[in_LoanDetails]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=EMI\\(month\\):\\s*)\\d+&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=EMI\(month\):\s*)\d+" RegexOption="IgnoreCase, Compiled">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
